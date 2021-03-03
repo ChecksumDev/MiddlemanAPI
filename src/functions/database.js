@@ -18,3 +18,15 @@ const Images = sequelize.define('images', {
 	user: Sequelize.STRING,
 });
 exports.Images = Images;
+
+const Apikeys = sequelize.define('apikeys', {
+	key: {
+		type: Sequelize.STRING,
+		unique: true,
+	},
+	user: {
+		type: Sequelize.STRING,
+		unique: true,
+	},
+});
+exports.Apikeys = Apikeys;
